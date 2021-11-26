@@ -54,11 +54,17 @@
 #        msg: URL1 = {{URL1}}
 #      vars:
 #        URL1: play.example.com
-- name: print facts
+#- name: print facts
+#  hosts: all
+#  vars:
+#    ansible_distribution: sample
+#  tasks:
+#    - name: Print a fact
+#      ansible.builtin.debug:
+#        msg: "HOST OS ={{ansible_distribution}}"
+## General good practice we dont start our user varibale with ansible_ ,because those are for system facts
+
+- name: run time varibales
   hosts: all
-  vars:
-    ansible_distribution: sample
   tasks:
-    - name: Print a fact
-      ansible.builtin.debug:
-        msg: "HOST OS ={{ansible_distribution}}"
+    -name: Get uptime command output
