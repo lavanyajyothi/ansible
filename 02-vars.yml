@@ -20,3 +20,13 @@
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
+- name: Demo on task Variables
+  hosts: all
+  vars_files:
+    - sample-vars.yml
+  tasks:
+    - name: Access URL from task var
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
+      vars:
+        URL: task.google.com
