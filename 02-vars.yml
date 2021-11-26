@@ -28,7 +28,15 @@
         msg: URL = {{URL}}
       vars:
         URL: task.google.com
-    - name: Access URL from previous task
+##    - name: Access URL from previous task
+##    ansible.builtin.debug:
+##      msg: URL = {{URL}}
+## you can declare the varibale on task however it only for that task
+
+- name: Demo on inventory Variables
+  hosts: all
+  tasks:
+    - name: Access URL from inventory
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
