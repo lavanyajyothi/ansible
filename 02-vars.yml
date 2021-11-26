@@ -67,4 +67,5 @@
 - name: run time varibales
   hosts: all
   tasks:
-    -name: Get uptime command output
+    - name: Get uptime command output
+      ansible.builtin.shell: uptime
