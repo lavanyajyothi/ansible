@@ -30,5 +30,5 @@
         URL: task.google.com
     - name: Access URL from previous task
       ansible.builtin.debug:
-        msg:URL = {{URL}}
+        msg: URL = {{URL}}
 
