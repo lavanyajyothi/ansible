@@ -20,6 +20,7 @@
       ansible.builtin.debug:
         msg: URL = {{URL}}
 
+
 - name: Demo on task Variables
   hosts: all
   tasks:
