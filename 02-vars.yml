@@ -57,6 +57,6 @@
 - name: print facts
   hosts: all
   tasks:
-   - name: Print a fact
+    - name: Print a fact
       ansible.builtin.debug:
         msg: "HOST OS ={{ansible_distribution}}"
