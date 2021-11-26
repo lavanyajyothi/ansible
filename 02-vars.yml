@@ -36,5 +36,11 @@
     - name: Access URL from inventory
       ansible.builtin.debug:
         msg: URL = {{URL}}
+- name: Demo on cli Variables
+  hosts: all
+  tasks:
+    - name: Access URL from cli varibale
+      ansible.builtin.debug:
+        msg: URL = {{URL}}
 
 
