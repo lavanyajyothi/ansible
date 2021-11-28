@@ -1,4 +1,4 @@
 - name: Setup Frontend
-  hosts: Frontend
+  hosts: frontend
   roles:
     - Frontend
