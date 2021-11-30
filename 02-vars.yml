@@ -74,3 +74,12 @@
     - name: print OUT
       ansible.builtin.debug:
         msg: "{{OUT.stdout}}"
+
+
+##varible vallues need not to be quoted while declaring
+- ##variable while accessing alsso need not to be quoted,unless if the value  is starting with variable
+  ##meaning
+  ##Hello {{URL}} need not to be quoted because this is not starting with a variable
+  ##{{URL}} Hello need to  be quoted since it is starting with a variable
+  ##Booleans  while quoted considers as string.
+  ##Number quoted are not consider as string,those are still consider as numbers
