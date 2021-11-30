@@ -26,11 +26,3 @@ if [ "$1" == "all"]; then
 else
   CREATE $1
 fi
-
-    ;;
-  esac
-
-
-
-
-}
