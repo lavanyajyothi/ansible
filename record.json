@@ -3,7 +3,7 @@
   "Changes": [
     {
       "Action": "UPSERT",
-      "ResourceRecordSets": {
+      "ResourceRecordSet": {
         "Name": "DNSNAME",
         "Type": "A",
         "TTL": 10,
@@ -16,14 +16,3 @@
     }
   ]
 }
-
-
-
-
-
-
-
-
-
-
-
