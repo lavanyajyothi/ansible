@@ -10,6 +10,7 @@ CREATE() {
     return
   fi
 
+
   sleep 5
 
   IP=$(aws ec2 describe-instances --filters  "Name=tag:Name,Values=$1" | jq ".Reservations[].Instances[].PrivateIpAddress" | grep -v null )
