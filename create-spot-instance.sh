@@ -3,6 +3,7 @@
 CREATE() {
   COUNT=$(aws ec2 describe-instances --filters  "Name=tag:Name,Values=$1" | jq ".Reservations[].Instances[].PrivateIpAddress" | grep -v null  | wc -l)
 
+
   if [ $COUNT -eq 0 ]; then
     aws ec2 run-instances --launch-template LaunchTemplateId=lt-02de5b54b6b56e7f9,Version=2 --tag-specifications "ResourceType=instance,Tags=[{Key=Name,Value=$1}]" "ResourceType=spot-instances-request,Tags=[{Key=Name,Value=$1}]" | jq &>/dev/null
   else
