@@ -5,7 +5,7 @@
       "Action": "UPSERT",
       "ResourceRecordSet": {
         "Name": "DNSNAME",
-        "Type": "A",
+        "Type": "CNAME",
         "TTL": 10,
         "ResourceRecords": [
           {
