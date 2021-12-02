@@ -18,3 +18,4 @@ redis.roboshop.internal
 rabbitmq.roboshop.internal
 [user]
 user.roboshop.internal
+
