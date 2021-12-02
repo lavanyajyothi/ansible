@@ -1,6 +1,5 @@
-- name: Setup Frontend
+- name: Setup frontend
   hosts: frontend
   become: true
-  tags: frontend
   roles:
     - frontend
