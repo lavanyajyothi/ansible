@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 UPDATE_DNS_RECORDS() {
     IP=$(aws ec2 describe-instances --filters  "Name=tag:Name,Values=$1" | jq ".Reservations[].Instances[].PrivateIpAddress" | grep -v null )
     ## xargs is used to remove the double  quotes
