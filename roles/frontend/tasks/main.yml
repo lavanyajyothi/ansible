@@ -10,6 +10,6 @@
     enabled: yes
 
 - name: Download code
-  include_roles:
+  include_role:
     name: common
     tasks_from: download
