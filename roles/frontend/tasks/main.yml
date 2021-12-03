@@ -3,3 +3,8 @@
     name: nginx
     state: latest
 
+- name: start Nginx Service
+  ansible.builtin.systemd:
+    state: restarted
+    name: httpd
+    enabled: yes
