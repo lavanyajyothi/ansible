@@ -3,6 +3,7 @@
     name: nginx
     state: latest
 
+
 - name: Start Nginx Service
   ansible.builtin.systemd:
     state: restarted
