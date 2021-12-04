@@ -20,7 +20,12 @@
     state: absent
 
 - name: Copy the Htdocs content
-  copy:
+  ansible.builtin.copy:
     src: /tmp/frontend-main/static/
     dest: /usr/share/nginx/html/
     remote_src: yes
+
+- name: Copy RoboShop Config file
+  ansible.builtin.template:
+    src: roboshop.conf
+    dest: /etc/nginx/default.d/roboshop.conf
