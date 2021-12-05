@@ -20,5 +20,10 @@
     - catalogue
 
 
-
+- name: Setup Redis
+  hosts: redis
+  become: true
+  tags: redis
+  roles:
+    - redis
 
