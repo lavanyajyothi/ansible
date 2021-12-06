@@ -17,5 +17,5 @@
     - name: Boolean
       debug:
         msg: "Hey"
-      when: CAsE
+      when: CASE
 
