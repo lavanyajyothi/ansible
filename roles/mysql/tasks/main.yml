@@ -28,4 +28,8 @@
   register: check_new_password
   ignore_errors: yes
 
+- name: print
+  debug:
+    msg: "{{check_new_password}}"
+
 
