@@ -11,4 +11,4 @@
     - name: Condition on Numbers
       debug:
         msg: "{{COUNT}}"
-      when: COUNT >=2
+      when: COUNT >= 2
