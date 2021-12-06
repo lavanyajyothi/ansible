@@ -41,7 +41,7 @@
   roles:
     - cart
 
-name: Setup mysql
+- name: Setup MySQL
   hosts: mysql
   become: true
   tags: mysql
