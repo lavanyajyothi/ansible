@@ -1,6 +1,32 @@
+- name: Add roboshop app user
+  ansible.builtin.user:
+    name: roboshop
+  when: APP_TYPE == "backend"
+
 - name: Download {{COMPONENT}} Code
   ansible.builtin.unarchive:
     src: https://github.com/roboshop-devops-project/{{COMPONENT}}/archive/main.zip
     dest: /tmp
     remote_src: yes
+
+- name: Remove existing code
+  ansible.builtin.file:
+    path: "{{APP_LOCATIONN}}"
+    state: absent
+  when: APP_TYPE == "frontend" or APP_TYPE == "backend"
+
+- name: Copy app code
+  ansible.builtin.copy:
+    src: /tmp/{{COMPONENT}}-main/
+    dest: "{{APP_LOCATIONN}}"
+    remote_src: true
+  become_user: roboshop
+  when: APP_TYPE == "backend"
+
+- name: Copy app code
+  ansible.builtin.copy:
+    src: /tmp/{{COMPONENT}}-main/
+    dest: "{{APP_LOCATIONN}}"
+    remote_src: true
+  when: APP_TYPE == "frontend"
 
