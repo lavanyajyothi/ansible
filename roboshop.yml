@@ -48,6 +48,12 @@
   roles:
     - mysql
 
+- name: Setup Shipping
+  hosts: shipping
+  become: true
+  tags: shipping
+  roles:
+    - shipping
 
 
 
