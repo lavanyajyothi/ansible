@@ -8,7 +8,7 @@
     name: common
     tasks_from: download
   vars:
-    APP_LOCATION: "/home/roboshop/{{COOMPONENT}"
+    APP_LOCATION: "/home/roboshop/{{COMPONENT}"
     APP_USER: roboshop
 
 - name: Install nodejs dependencies
