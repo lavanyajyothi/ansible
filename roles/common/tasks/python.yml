@@ -1,5 +1,5 @@
 - name: Install Python
-  ansible.builtin.yum:
+  yum:
     name:
       - python36
       - gcc
