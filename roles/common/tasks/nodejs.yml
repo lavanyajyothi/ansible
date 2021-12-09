@@ -11,16 +11,15 @@
     APP_LOCATION: "/home/roboshop/{{COMPONENT}}"
     APP_USER: roboshop
 
-- name: Install nodejs dependencies
+- name: Install Nodejs dependencies
   community.general.npm:
     path: /home/roboshop/{{COMPONENT}}
   become_user: roboshop
 
-- name: Download Systemd
+- name: Download SystemD
   ansible.builtin.include_role:
     name: common
     tasks_from: systemd
-
 
 
 
