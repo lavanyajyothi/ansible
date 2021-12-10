@@ -11,6 +11,8 @@
   tasks:
     - name: print password
       debug:
-        ,sg: "{{PASS}}""
+        msg: "{{PASS}}""
+
+
 
 
